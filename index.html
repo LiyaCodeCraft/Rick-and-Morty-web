@@ -6,65 +6,65 @@
   <title>Rick and Morty - Multiverse Hub</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
-<script>
-  const heroImages = [
-    'images/rickAndMortyCover1.png',
-    'images/rickAndMortyCover2.png'
-  ];
-  let currentImgIndex = 0;
-  const carouselImg = document.getElementById('hero-carousel-img');
-
-  if (carouselImg) {
-    setInterval(() => {
-      currentImgIndex = (currentImgIndex + 1) % heroImages.length;
-      carouselImg.src = heroImages[currentImgIndex];
-    }, 4000); // Swaps image every 4 seconds
-  }
-</script>
-
 <body>
 
-  <div class="container">
-    <header class="navbar">
-      <nav class="nav-links">
-        <a href="index.html" class="nav-btn active">Home</a>
-        <a href="storytime.html" class="nav-btn">StoryTime</a>
-        <a href="episodes.html" class="nav-btn">Episodes</a>
-        <a href="characters.html" class="nav-btn">Characters</a>
-        <a href="gadgets.html" class="nav-btn">Gadgets &amp; Inventions</a>
-      </nav>
-      <div class="external-links">
-        <a href="https://github.com/LiyaCodeCraft" target="_blank" rel="noopener" class="icon-btn">GitHub</a>
-        <a href="https://figma.com" target="_blank" rel="noopener" class="icon-btn">Figma</a>
-      </div>
-    </header>
+  <header>
+    <h1>Rick and Morty</h1>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="storytime.html">StoryTime</a>
+      <a href="episodes.html">Episodes</a>
+      <a href="characters.html">Characters</a>
+      <a href="gadgets.html">Gadgets &amp; Inventions</a>
+      <a href="https://github.com/LiyaCodeCraft" target="_blank" rel="noopener" class="icon-btn">GitHub</a>
+    </nav>
+  </header>
 
-    <main class="hero-section">
-      <div class="hero-image-container">
-        <img src="images/rickAndMortyCover1.png" alt="Rick and Morty Cover" class="hero-img">
-      </div>
+  <main class="main-container">
+    <!-- Hero Image Carousel -->
+    <div class="hero-container">
+      <img src="images/rickAndMortyCover1.png" alt="Rick and Morty Cover" class="hero-img" id="hero-carousel-img">
+    </div>
 
-      <section class="card-grid-4">
-        <a href="storytime.html" class="card home-card">
-          <h3>StoryTime</h3>
-          <p>Synopses, lore, and universe background across Dimension C-137 and the Citadel.</p>
-        </a>
-        <a href="episodes.html" class="card home-card">
-          <h3>Episode's</h3>
-          <p>Complete guide across Seasons 1–7, featuring key storylines and prime archs.</p>
-        </a>
-        <a href="characters.html" class="card home-card">
-          <h3>Characters</h3>
-          <p>Profiles for Rick, Morty, Summer, Beth, Jerry, and space counterparts.</p>
-        </a>
-        <a href="gadgets.html" class="card home-card">
-          <h3>Gadgets &amp; Inventions</h3>
-          <p>Portal Gun, Meeseeks Box, Interdimensional Cable, and iconic sci-fi tech.</p>
-        </a>
-      </section>
-    </main>
-  </div>
+    <!-- Home Page Feature Cards -->
+    <section class="home-cards">
+      <article class="card">
+        <h3>StoryTime</h3>
+        <p>Premises, lore, and universe background across Dimension C-137 and the Citadel.</p>
+      </article>
+
+      <article class="card">
+        <h3>Episode's</h3>
+        <p>A complete guide across Seasons 1–7, featuring key storylines and prime arches.</p>
+      </article>
+
+      <article class="card">
+        <h3>Characters</h3>
+        <p>Profiles for Rick, Morty, Summer, Beth, Jerry, and space counterparts.</p>
+      </article>
+
+      <article class="card">
+        <h3>Gadgets &amp; Inventions</h3>
+        <p>Portal Gun, Meeseeks Box, Interdimensional Cable, and iconic sci-fi tech.</p>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    const heroImages = [
+      'images/rickAndMortyCover1.png',
+      'images/rickAndMortyCover2.png'
+    ];
+    let currentImgIndex = 0;
+    const carouselImg = document.getElementById('hero-carousel-img');
+
+    if (carouselImg) {
+      setInterval(() => {
+        currentImgIndex = (currentImgIndex + 1) % heroImages.length;
+        carouselImg.src = heroImages[currentImgIndex];
+      }, 4000);
+    }
+  </script>
 
 </body>
 </html>

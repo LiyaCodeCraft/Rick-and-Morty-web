@@ -1,4 +1,4 @@
-/* --- Global Styles --- */
+/* --- Global Reset & Base Styles --- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,12 +13,13 @@ body {
   padding: 20px;
 }
 
-/* --- Navigation Header --- */
+/* --- Header & Navigation --- */
 header {
+  max-width: 900px;
+  margin: 0 auto 30px auto;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-bottom: 30px;
 }
 
 header h1 {
@@ -33,22 +34,22 @@ nav {
   flex-wrap: wrap;
 }
 
-/* Fix for visited/unvisited link visibility */
+/* Fix for visited/unvisited navbar link visibility */
 nav a, 
 nav a:visited {
   color: #ffffff !important;
   text-decoration: none;
   font-weight: 600;
   font-size: 1.05rem;
-  transition: color 0.2s ease, background-color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 nav a:hover,
 nav a.active {
-  color: #a3e635 !important; /* Bright portal green on hover/active */
+  color: #a3e635 !important; /* Bright portal green on hover and active page */
 }
 
-/* GitHub Button Styling */
+/* GitHub Navbar Button Styling */
 nav a.icon-btn,
 nav a.icon-btn:visited {
   background-color: #1f2937;
@@ -63,26 +64,35 @@ nav a.icon-btn:hover {
   color: #a3e635 !important;
 }
 
-/* --- Layouts & Cards --- */
-main {
-  max-width: 1000px;
+/* --- Layout Containers --- */
+main,
+.main-container {
+  max-width: 900px;
   margin: 0 auto;
-}
-
-.episodes-list,
-.character-grid {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
 }
 
+/* --- Cards & Feature Sections --- */
 .card,
 .flex-card {
   background-color: #88b04b;
   color: #ffffff;
   border-radius: 12px;
   padding: 20px;
+  width: 100%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.home-cards,
+.episodes-list,
+.character-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
 }
 
 .flex-card {
@@ -96,9 +106,18 @@ main {
   flex: 1;
 }
 
-.card-content h3 {
-  font-size: 1.5rem;
+.card-content h3,
+.card h3 {
+  font-size: 1.4rem;
   margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.card-content p,
+.card p {
+  color: #f0fdf4;
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
 
 .card-img {
@@ -106,15 +125,17 @@ main {
   height: 120px;
   object-fit: cover;
   border-radius: 8px;
+  flex-shrink: 0;
 }
 
-/* --- Expandable Dropdown Styling --- */
+/* --- Expandable Lists (<details>) Styling --- */
 details {
   cursor: pointer;
+  width: 100%;
 }
 
 details summary {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: bold;
   outline: none;
   list-style-type: '▶ ';
@@ -130,7 +151,7 @@ details[open] summary {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 .character-details {
@@ -140,14 +161,21 @@ details[open] summary {
 }
 
 .character-details summary {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
-/* --- Hero & Carousel --- */
+/* --- Hero Image & Carousel --- */
+.hero-container {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
 .hero-img {
   width: 100%;
   max-height: 450px;
   object-fit: cover;
+  display: block;
   border-radius: 12px;
   transition: opacity 0.5s ease-in-out;
 }
