@@ -8,102 +8,52 @@
 </head>
 <body>
 
-  <header>
-    <h1>Rick and Morty</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="storytime.html">Storytime</a>
-      <a href="episodes.html">Episodes</a>
-      <a href="characters.html" class="active">Characters</a>
-      <a href="gadgets.html">Gadgets</a>
-      <a href="https://github.com/LiyaCodeCraft" target="_blank" rel="noopener" class="icon-btn">GitHub</a>
-    </nav>
-  </header>
+  <div class="page-container">
+    <header>
+      <h1>Rick and Morty</h1>
+      <nav>
+        <a href="index.html" class="nav-pill-btn">Home</a>
+        <a href="storytime.html" class="nav-pill-btn">StoryTime</a>
+        <a href="episodes.html" class="nav-pill-btn">Episodes</a>
+        <a href="characters.html" class="nav-pill-btn active">Characters</a>
+        <a href="gadgets.html" class="nav-pill-btn">Gadgets &amp; Inventions</a>
+      </nav>
+    </header>
 
-  <main class="character-grid">
+    <main>
+      <h2 class="page-title">Multiverse Primary Characters</h2>
 
-    <!-- Rick Sanchez -->
-    <article class="flex-card">
-      <div class="card-content">
-        <h3>Rick Sanchez</h3>
-        <p>Morty's grandfather and the smartest man in the multiverse.</p>
-        
-        <details class="character-details">
-          <summary>View Key Appearances</summary>
-          <ul class="sub-item-list">
-            <li><strong>Seasons:</strong> Appears in all Seasons (1–7)</li>
-            <li><strong>Key Episodes:</strong> S01E01, S01E10, S03E01, S07E05</li>
-          </ul>
-        </details>
-      </div>
-      <img src="images/Rick.png" alt="Rick Sanchez" class="card-img">
-    </article>
+      <!-- Mandarin Grid Layout: 3 Columns with Images next to Text (Matching Design image_9.png) -->
+      <section class="characters-grid-view">
+        <!-- Rick -->
+        <article class="char-card-design">
+          <img src="images/Rick.png" alt="Rick Sanchez">
+          <div class="char-text-box">
+            <h3>Rick Sanchez</h3>
+            <p>C-137 mad scientist, smartest man in the multiverse.</p>
+          </div>
+        </article>
 
-    <article class="flex-card">
-      <div class="card-content">
-        <h3>Morty Smith</h3>
-        <p>Rick's anxious teenage grandson who gets dragged on multiverse adventures.</p>
-        
-        <details class="character-details">
-          <summary>View Key Appearances</summary>
-          <ul class="sub-item-list">
-            <li><strong>Seasons:</strong> Appears in all Seasons (1–7)</li>
-            <li><strong>Key Episodes:</strong> S01E06, S03E07, S05E10, S07E10</li>
-          </ul>
-        </details>
-      </div>
-      <img src="images/morty.png" alt="Morty Smith" class="card-img">
-    </article>
+        <!-- Morty -->
+        <article class="char-card-design">
+          <img src="images/morty.png" alt="Morty Smith">
+          <div class="char-text-box">
+            <h3>Morty Smith</h3>
+            <p>Rick's anxious teenage grandson, moral compass.</p>
+          </div>
+        </article>
 
-    <article class="flex-card">
-      <div class="card-content">
-        <h3>Summer Smith</h3>
-        <p>Morty's older sister, often proving to be just as capable and chaotic as Rick.</p>
-        
-        <details class="character-details">
-          <summary>View Key Appearances</summary>
-          <ul class="sub-item-list">
-            <li><strong>Seasons:</strong> Seasons 1–7</li>
-            <li><strong>Key Episodes:</strong> S01E07, S03E02, S04E07, S06E02</li>
-          </ul>
-        </details>
-      </div>
-      <img src="images/summer.png" alt="Summer Smith" class="card-img">
-    </article>
-
-    <article class="flex-card">
-      <div class="card-content">
-        <h3>Beth Smith</h3>
-        <p>Rick's daughter and a cardiac horse surgeon trying to balance family life.</p>
-        
-        <details class="character-details">
-          <summary>View Key Appearances</summary>
-          <ul class="sub-item-list">
-            <li><strong>Seasons:</strong> Seasons 1–7</li>
-            <li><strong>Key Episodes:</strong> S03E09, S04E10, S06E03</li>
-          </ul>
-        </details>
-      </div>
-      <img src="images/beth.png" alt="Beth Smith" class="card-img">
-    </article>
-
-    <article class="flex-card">
-      <div class="card-content">
-        <h3>Jerry Smith</h3>
-        <p>Morty and Summer's simple, insecure father who often ends up as comic relief.</p>
-        
-        <details class="character-details">
-          <summary>View Key Appearances</summary>
-          <ul class="sub-item-list">
-            <li><strong>Seasons:</strong> Seasons 1–7</li>
-            <li><strong>Key Episodes:</strong> S02E02, S03E05, S06E05</li>
-          </ul>
-        </details>
-      </div>
-      <img src="images/jerry.png" alt="Jerry Smith" class="card-img">
-    </article>
-
-  </main>
+        <!-- Summer -->
+        <article class="char-card-design">
+          <img src="images/summer.png" alt="Summer Smith">
+          <div class="char-text-box">
+            <h3>Summer Smith</h3>
+            <p>Rick's capable, chaotic, teenage granddaughter.</p>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
 
 </body>
 </html>
