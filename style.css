@@ -1,12 +1,12 @@
-/* --- Root Styles & Global Reset --- */
+/* --- Root Styles & Design Reset --- */
 :root {
-  --bg-dark-olive: #2b3b2e;      /* The main background from Figma images */
-  --btn-dark-olive: #3b4b3e;     /* Inactive navbar buttons */
+  --bg-dark-olive: #2b3b2e;      /* Figma overall background */
+  --btn-dark-olive: #3b4b3e;     /* Inactive/default navbar buttons */
   --highlight-lime: #a0ff9b;     /* Active navbar and hover highlights */
-  --content-box-sage: #d1e8d4;   /* Main content boxes from design */
-  --homepage-pill: #f1f5f9;      /* Headings on the homepage column design */
-  --text-primary: #ffffff;       /* Main light text */
-  --text-dark: #000000;          /* Dark text for content boxes */
+  --content-box-sage: #d1e8d4;   /* Light sage green content blocks */
+  --homepage-capsule: #f1f5f9;   /* Homepage heading capsule bg */
+  --text-primary: #ffffff;       /* Light text */
+  --text-dark: #000000;          /* Dark text inside content boxes */
 }
 
 * {
@@ -20,38 +20,39 @@ body {
   background-color: var(--bg-dark-olive);
   color: var(--text-primary);
   min-height: 100vh;
-  padding: 20px;
+  padding: 30px; /* Spacing from design image */
   line-height: 1.5;
 }
 
-/* --- Container & Header (Mandatory Design) --- */
+/* --- Fixed Container & Header Design --- */
 .page-container {
-  max-width: 1100px;
+  max-width: 1200px; /* Adjust based on image scale, try 1200 */
   margin: 0 auto;
 }
 
 header {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 header h1 {
   font-size: 2.2rem;
   color: var(--text-primary);
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  font-weight: 700;
 }
 
 nav {
   display: flex;
-  gap: 10px;
+  gap: 12px; /* Spacing between buttons in design */
 }
 
-/* Pill Button Design from design images */
+/* MANDATORY: The Pill Navbar Button Design */
 .nav-pill-btn {
   text-decoration: none;
   color: var(--text-primary);
   background-color: var(--btn-dark-olive);
-  padding: 10px 20px;
-  border-radius: 8px; /* Slightly rounded pill corners */
+  padding: 12px 24px;
+  border-radius: 8px; /* Slightly rounded corners from image */
   font-weight: 500;
   font-size: 0.95rem;
   transition: background-color 0.2s ease, color 0.2s ease;
@@ -62,108 +63,114 @@ nav {
   color: var(--text-dark);
 }
 
-/* Mandatory Active Link style (Lime Green) from Design */
+/* Mandatory Active/Current Page Link (Lime Green) */
 .nav-pill-btn.active {
   background-color: var(--highlight-lime);
   color: var(--text-dark);
+  font-weight: 600;
 }
 
-/* --- Main Layout Wrapper --- */
+/* --- Layout Wrappers --- */
 main {
   width: 100%;
 }
 
 .page-title {
   font-size: 2rem;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   color: var(--text-primary);
+  font-weight: 700;
 }
 
-/* --- LIGHT SAGE CONTENT BOXES (Subpages like StoryTime) --- */
-.content-box-Sage {
+/* --- LIGHT SAGE CONTENT BOXES (Story, Episodes, Characters) --- */
+.content-box-sage {
   background-color: var(--content-box-sage);
   color: var(--text-dark);
-  padding: 25px;
+  padding: 30px; /* Spacing from image_7.png and image_8.png */
   border-radius: 12px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.content-box-Sage strong {
-  font-size: 1.1rem;
+.content-box-sage strong {
+  font-size: 1.15rem;
+  font-weight: 700;
 }
 
-/* --- HOMEPAGE LAYOUT (Matching image_6.png) --- */
+/* --- HOMEPAGE LAYOUT (Replicating image_6.png) --- */
 
-/* Hero Image Carousel */
 .homepage-hero-img {
   width: 100%;
   border-radius: 12px;
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 50px; /* Large space from image_6.png */
   object-fit: cover;
-  transition: opacity 0.5s ease-in-out;
 }
 
-/* Mandala: 4 Columns Side-by-Side */
-.homepage-columns-layout {
+/* Design Mandatory: 4-Column Split layout for the features */
+.homepage-features-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 25px;
   width: 100%;
 }
 
-.homepage-column-item {
+.homepage-feature-item {
   text-align: center;
 }
 
-/* Headings in light pill capsule from design */
-.homepage-column-item h2 {
-  background-color: var(--homepage-pill);
+/* Mandantory Capsule Headings from image_6.png */
+.homepage-feature-item h2 {
+  background-color: var(--homepage-capsule);
   color: var(--text-dark);
   display: inline-block;
-  padding: 8px 20px;
-  border-radius: 30px;
-  font-size: 1.1rem;
+  padding: 10px 30px;
+  border-radius: 30px; /* Fully rounded 'capsule' */
+  font-size: 1.15rem;
   font-weight: 600;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 
-.homepage-column-item p {
+.homepage-feature-item p {
   color: var(--text-primary);
   font-size: 0.85rem;
   line-height: 1.4;
-  max-width: 200px;
+  max-width: 220px;
   margin: 0 auto;
 }
 
-/* --- EPISODES LAYOUT (Matching image_8.png) --- */
+/* --- EPISODES LAYOUT (Replicating image_8.png) --- */
 
-/* Mandatory Split View (Text boxes on left, art on right) */
+/* Mandatory Split View (Text blocks left, season art right) */
 .episodes-split-view {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Two equal columns */
-  gap: 30px;
+  gap: 40px;
   align-items: start;
 }
 
-.episodes-listing-stack {
+.episodes-stack {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
 }
 
-/* Extra summary detail styles for episodes */
+/* Detail text styles for episode meta */
 .summary-meta-line {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 500;
+  color: #1f2937; /* Slightly darker than text-dark */
 }
 
 .episode-detail-text {
-  font-size: 0.85rem;
-  line-height: 1.4;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.episodes-key-art-container {
+  width: 100%;
 }
 
 .episodes-key-art {
@@ -172,13 +179,13 @@ main {
   object-fit: cover;
 }
 
-/* --- CHARACTERS LAYOUT (Matching image_9.png) --- */
+/* --- CHARACTERS LAYOUT (Replicating image_9.png) --- */
 
-/* Mandatory grid layout for characters */
-.characters-grid-view {
+/* Mandatory grid for characters */
+.characters-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 Characters across */
-  gap: 25px;
+  grid-template-columns: repeat(3, 1fr); /* 3 characters across from design */
+  gap: 30px;
 }
 
 .char-card-design {
@@ -187,24 +194,30 @@ main {
   border-radius: 12px;
   display: flex;
   align-items: center;
-  padding: 15px;
-  gap: 15px;
+  padding: 20px;
+  gap: 20px;
 }
 
 .char-card-design img {
-  width: 80px;
-  height: 80px;
+  width: 90px; /* Precise scaling from image_9.png */
+  height: 90px;
   border-radius: 8px;
   object-fit: cover;
   flex-shrink: 0;
 }
 
+.char-text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
 .char-text-box h3 {
-  font-size: 1.1rem;
-  margin-bottom: 5px;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .char-text-box p {
-  font-size: 0.85rem;
-  line-height: 1.3;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
