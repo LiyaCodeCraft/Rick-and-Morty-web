@@ -1,3 +1,4 @@
+/* --- Global Styles --- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,275 +6,148 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background-color: #3b5a3e;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #2b4c38;
   color: #ffffff;
-  line-height: 1.5;
   min-height: 100vh;
-}
-
-.container {
-  max-width: 1050px;
-  margin: 0 auto;
   padding: 20px;
 }
 
-
-.navbar {
+/* --- Navigation Header --- */
+header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+nav {
+  display: flex;
   align-items: center;
-  background-color: #4f6e52;
-  padding: 10px 16px;
-  border-radius: 8px;
-  margin-bottom: 24px;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
-.nav-links {
-  display: flex;
-  gap: 8px;
-}
-
-
-.nav-btn {
-  color: #ffffff;
-  background-color: #2b3a2c; 
+/* Fix for visited/unvisited link visibility */
+nav a, 
+nav a:visited {
+  color: #ffffff !important;
   text-decoration: none;
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-weight: 500;
-  font-size: 0.95rem;
-  transition: opacity 0.2s ease;
-}
-
-.nav-btn:hover {
-  opacity: 0.85;
-}
-
-.nav-btn.active {
-  color: #223023;
-  background-color: #8bb174; 
   font-weight: 600;
-}
-
-.external-links {
-  display: flex;
-  gap: 8px;
-}
-
-.icon-btn {
-  color: #ffffff;
-  background-color: #2b3a2c;
-  text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 8px;
-  font-size: 0.9rem;
-}
-
-.hero-section {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.page-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 10px;
-}
-
-.hero-image-container {
-  width: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.hero-img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.card-grid-4 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  margin-top: 10px;
-}
-
-.card-grid-4 .card.home-card {
-  background: transparent;
-  text-align: center;
-  text-decoration: none;
-  padding: 0;
-}
-
-.card-grid-4 .card.home-card h3 {
-  background-color: #8bb174;
-  color: #1f2c20;
-  padding: 10px 16px;
-  border-radius: 12px;
   font-size: 1.05rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-  display: block;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
-.card-grid-4 .card.home-card p {
-  color: #e2ebd9;
-  font-size: 0.85rem;
-  line-height: 1.3;
+nav a:hover,
+nav a.active {
+  color: #a3e635 !important; /* Bright portal green on hover/active */
 }
 
-.story-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  max-width: 650px;
-}
-
-.episodes-layout {
-  display: flex;
-  gap: 30px;
-  align-items: flex-start;
-}
-
-.episodes-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  flex: 1;
-}
-
-.side-banner-container {
-  width: 340px;
-  flex-shrink: 0;
-}
-
-.side-banner-img {
-  width: 100%;
-  border-radius: 12px;
-  object-fit: cover;
-}
-
-
-.card {
-  background-color: #8bb174;
-  color: #ffffff;
-  padding: 20px;
-  border-radius: 16px;
-  text-decoration: none;
-}
-
-.card h3 {
-  color: #ffffff;
-  font-size: 1.3rem;
-  margin-bottom: 8px;
-}
-
-.card p {
-  color: #f1f7ed;
+/* GitHub Button Styling */
+nav a.icon-btn,
+nav a.icon-btn:visited {
+  background-color: #1f2937;
+  color: #ffffff !important;
+  padding: 6px 14px;
+  border-radius: 6px;
   font-size: 0.95rem;
-  line-height: 1.4;
 }
-*/
-.card-grid-6 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+
+nav a.icon-btn:hover {
+  background-color: #374151;
+  color: #a3e635 !important;
+}
+
+/* --- Layouts & Cards --- */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.episodes-list,
+.character-grid {
+  display: flex;
+  flex-direction: column;
   gap: 20px;
+}
+
+.card,
+.flex-card {
+  background-color: #88b04b;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .flex-card {
   display: flex;
-  gap: 16px;
-  align-items: stretch;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
 
 .card-content {
-  background-color: #8bb174;
-  padding: 18px;
-  border-radius: 16px;
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .card-content h3 {
-  color: #ffffff;
-  font-size: 1.2rem;
-  margin-bottom: 6px;
-}
-
-.card-content p {
-  color: #f1f7ed;
-  font-size: 0.85rem;
-  line-height: 1.4;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
 }
 
 .card-img {
-  width: 130px;
-  height: 130px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
-  border-radius: 16px;
-  flex-shrink: 0;
+  border-radius: 8px;
 }
 
-@media (max-width: 850px) {
-  .card-grid-6 {
-    grid-template-columns: 1fr;
-  }
-
-  .card-grid-4 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .episodes-layout {
-    flex-direction: column;
-  }
-
-  .side-banner-container {
-    width: 100%;
-  }
-}
-
-/* --- Expandable Lists Styling --- */
-.expandable-card {
+/* --- Expandable Dropdown Styling --- */
+details {
   cursor: pointer;
 }
 
-.expandable-card summary,
-.character-details summary {
-  font-weight: 600;
-  font-size: 1.1rem;
+details summary {
+  font-size: 1.25rem;
+  font-weight: bold;
   outline: none;
   list-style-type: '▶ ';
 }
 
 details[open] summary {
   list-style-type: '▼ ';
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .sub-item-list {
-  margin-top: 10px;
   padding-left: 20px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  font-size: 0.9rem;
+  gap: 8px;
+  font-size: 1rem;
 }
 
 .character-details {
-  margin-top: 10px;
-  padding-top: 8px;
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  cursor: pointer;
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-/* Hero Carousel Fade Effect */
+.character-details summary {
+  font-size: 1.1rem;
+}
+
+/* --- Hero & Carousel --- */
 .hero-img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
   transition: opacity 0.5s ease-in-out;
 }
