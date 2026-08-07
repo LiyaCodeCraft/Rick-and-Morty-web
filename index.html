@@ -6,6 +6,23 @@
   <title>Rick and Morty - Multiverse Hub</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
+<script>
+  const heroImages = [
+    'images/rickAndMortyCover1.png',
+    'images/rickAndMortyCover2.png'
+  ];
+  let currentImgIndex = 0;
+  const carouselImg = document.getElementById('hero-carousel-img');
+
+  if (carouselImg) {
+    setInterval(() => {
+      currentImgIndex = (currentImgIndex + 1) % heroImages.length;
+      carouselImg.src = heroImages[currentImgIndex];
+    }, 4000); // Swaps image every 4 seconds
+  }
+</script>
+
 <body>
 
   <div class="container">
@@ -18,7 +35,7 @@
         <a href="gadgets.html" class="nav-btn">Gadgets &amp; Inventions</a>
       </nav>
       <div class="external-links">
-        <a href="https://github.com" target="_blank" rel="noopener" class="icon-btn">GitHub</a>
+        <a href="https://github.com/LiyaCodeCraft" target="_blank" rel="noopener" class="icon-btn">GitHub</a>
         <a href="https://figma.com" target="_blank" rel="noopener" class="icon-btn">Figma</a>
       </div>
     </header>

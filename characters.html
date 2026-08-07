@@ -8,73 +8,102 @@
 </head>
 <body>
 
-  <div class="container">
-    <header class="navbar">
-      <nav class="nav-links">
-        <a href="index.html" class="nav-btn">Home</a>
-        <a href="storytime.html" class="nav-btn">StoryTime</a>
-        <a href="episodes.html" class="nav-btn">Episodes</a>
-        <a href="characters.html" class="nav-btn active">Characters</a>
-        <a href="gadgets.html" class="nav-btn">Gadgets &amp; Inventions</a>
-      </nav>
-      <div class="external-links">
-        <a href="https://github.com" target="_blank" rel="noopener" class="icon-btn">GitHub</a>
-        <a href="https://figma.com" target="_blank" rel="noopener" class="icon-btn">Figma</a>
+  <header>
+    <h1>Rick and Morty</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="storytime.html">Storytime</a>
+      <a href="episodes.html">Episodes</a>
+      <a href="characters.html" class="active">Characters</a>
+      <a href="gadgets.html">Gadgets</a>
+      <a href="https://github.com/LiyaCodeCraft" target="_blank" rel="noopener" class="icon-btn">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="character-grid">
+
+    <!-- Rick Sanchez -->
+    <article class="flex-card">
+      <div class="card-content">
+        <h3>Rick Sanchez</h3>
+        <p>Morty's grandfather and the smartest man in the multiverse.</p>
+        
+        <details class="character-details">
+          <summary>View Key Appearances</summary>
+          <ul class="sub-item-list">
+            <li><strong>Seasons:</strong> Appears in all Seasons (1–7)</li>
+            <li><strong>Key Episodes:</strong> S01E01, S01E10, S03E01, S07E05</li>
+          </ul>
+        </details>
       </div>
-    </header>
+      <img src="images/Rick.png" alt="Rick Sanchez" class="card-img">
+    </article>
 
-    <main class="hero-section">
-      <div class="card-grid-6">
-        <article class="flex-card">
-          <div class="card-content">
-            <h3>Rick Sanchez</h3>
-            <p>Morty's grandfather and the smartest man in the multiverse.<br><br>Invents gadgets, portals, spaceships, and takes Morty on dangerous adventures.</p>
-          </div>
-          <img src="images/Rick.png" alt="Rick Sanchez" class="card-img">
-        </article>
-
-        <article class="flex-card">
-          <div class="card-content">
-            <h3>Beth Smith</h3>
-            <p>Rick's daughter and Morty's mother.<br><br>Works as a horse surgeon (equine veterinarian) and deals with family issues.</p>
-          </div>
-          <img src="images/bethSmith.png" alt="Beth Smith" class="card-img">
-        </article>
-
-        <article class="flex-card">
-          <div class="card-content">
-            <h3>Morty Smith</h3>
-            <p>Rick's grandson.<br><br>Travels with Rick, often acting as the moral compass while trying to survive their adventures.</p>
-          </div>
-          <img src="images/morty.png" alt="Morty Smith" class="card-img">
-        </article>
-
-        <article class="flex-card">
-          <div class="card-content">
-            <h3>Jerry Smith</h3>
-            <p>Morty's father.<br><br>Often insecure and clumsy, but genuinely cares about his family.</p>
-          </div>
-          <img src="images/JerrySmith.png" alt="Jerry Smith" class="card-img">
-        </article>
-
-        <article class="flex-card">
-          <div class="card-content">
-            <h3>Summer Smith</h3>
-            <p>Morty's older sister.<br><br>Joins adventures more often as the series progresses and becomes tougher and more confident.</p>
-          </div>
-          <img src="images/summerSmith.png" alt="Summer Smith" class="card-img">
-        </article>
-
-        <article class="flex-card">
-          <div class="card-content">
-            <h3>Space Beth</h3>
-            <p>A clone or possibly the original Beth.<br><br>Travels space as a rebel fighting the Galactic Federation. Nobody knows which Beth is the clone.</p>
-          </div>
-          <img src="images/spaceBeth.png" alt="Space Beth" class="card-img">
-        </article>
+    <article class="flex-card">
+      <div class="card-content">
+        <h3>Morty Smith</h3>
+        <p>Rick's anxious teenage grandson who gets dragged on multiverse adventures.</p>
+        
+        <details class="character-details">
+          <summary>View Key Appearances</summary>
+          <ul class="sub-item-list">
+            <li><strong>Seasons:</strong> Appears in all Seasons (1–7)</li>
+            <li><strong>Key Episodes:</strong> S01E06, S03E07, S05E10, S07E10</li>
+          </ul>
+        </details>
       </div>
-    </main>
-  </div>
+      <img src="images/morty.png" alt="Morty Smith" class="card-img">
+    </article>
+
+    <article class="flex-card">
+      <div class="card-content">
+        <h3>Summer Smith</h3>
+        <p>Morty's older sister, often proving to be just as capable and chaotic as Rick.</p>
+        
+        <details class="character-details">
+          <summary>View Key Appearances</summary>
+          <ul class="sub-item-list">
+            <li><strong>Seasons:</strong> Seasons 1–7</li>
+            <li><strong>Key Episodes:</strong> S01E07, S03E02, S04E07, S06E02</li>
+          </ul>
+        </details>
+      </div>
+      <img src="images/summer.png" alt="Summer Smith" class="card-img">
+    </article>
+
+    <article class="flex-card">
+      <div class="card-content">
+        <h3>Beth Smith</h3>
+        <p>Rick's daughter and a cardiac horse surgeon trying to balance family life.</p>
+        
+        <details class="character-details">
+          <summary>View Key Appearances</summary>
+          <ul class="sub-item-list">
+            <li><strong>Seasons:</strong> Seasons 1–7</li>
+            <li><strong>Key Episodes:</strong> S03E09, S04E10, S06E03</li>
+          </ul>
+        </details>
+      </div>
+      <img src="images/beth.png" alt="Beth Smith" class="card-img">
+    </article>
+
+    <article class="flex-card">
+      <div class="card-content">
+        <h3>Jerry Smith</h3>
+        <p>Morty and Summer's simple, insecure father who often ends up as comic relief.</p>
+        
+        <details class="character-details">
+          <summary>View Key Appearances</summary>
+          <ul class="sub-item-list">
+            <li><strong>Seasons:</strong> Seasons 1–7</li>
+            <li><strong>Key Episodes:</strong> S02E02, S03E05, S06E05</li>
+          </ul>
+        </details>
+      </div>
+      <img src="images/jerry.png" alt="Jerry Smith" class="card-img">
+    </article>
+
+  </main>
 
 </body>
 </html>

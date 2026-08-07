@@ -238,3 +238,42 @@ body {
     width: 100%;
   }
 }
+
+/* --- Expandable Lists Styling --- */
+.expandable-card {
+  cursor: pointer;
+}
+
+.expandable-card summary,
+.character-details summary {
+  font-weight: 600;
+  font-size: 1.1rem;
+  outline: none;
+  list-style-type: '▶ ';
+}
+
+details[open] summary {
+  list-style-type: '▼ ';
+  margin-bottom: 10px;
+}
+
+.sub-item-list {
+  margin-top: 10px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+
+.character-details {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+/* Hero Carousel Fade Effect */
+.hero-img {
+  transition: opacity 0.5s ease-in-out;
+}
