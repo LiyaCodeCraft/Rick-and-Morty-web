@@ -8,51 +8,49 @@
 </head>
 <body>
 
-  <header>
-    <h1>Rick and Morty</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="storytime.html">Storytime</a>
-      <a href="episodes.html" class="active">Episodes</a>
-      <a href="characters.html">Characters</a>
-      <a href="gadgets.html">Gadgets</a>
-      <a href="https://github.com/LiyaCodeCraft" target="_blank" rel="noopener" class="icon-btn">GitHub</a>
-    </nav>
-  </header>
+  <div class="page-container">
+    <header>
+      <h1>Rick and Morty</h1>
+      <nav>
+        <a href="index.html" class="nav-pill-btn">Home</a>
+        <a href="storytime.html" class="nav-pill-btn">StoryTime</a>
+        <a href="episodes.html" class="nav-pill-btn active">Episodes</a>
+        <a href="characters.html" class="nav-pill-btn">Characters</a>
+        <a href="gadgets.html" class="nav-pill-btn">Gadgets &amp; Inventions</a>
+      </nav>
+    </header>
 
-  <main class="episodes-list">
-    <details class="card expandable-card">
-      <summary>Seasons 1–3: Origins &amp; Citadel</summary>
-      <ul class="sub-item-list">
-        <li><strong>S01E01:</strong> Pilot</li>
-        <li><strong>S01E06:</strong> Rick Potion #9</li>
-        <li><strong>S01E10:</strong> Close Rick-counters of the Rick Kind</li>
-        <li><strong>S02E06:</strong> The Ricks Must Be Crazy</li>
-        <li><strong>S03E01:</strong> The Rickshank Rickdemption</li>
-        <li><strong>S03E07:</strong> The Ricklantis Mixup (Tales from the Citadel)</li>
-      </ul>
-    </details>
+    <main>
+      <h2 class="page-title">Featured Episodes &amp; Seasons</h2>
 
-    <details class="card expandable-card">
-      <summary>Seasons 4–5: Multiverse Canon</summary>
-      <ul class="sub-item-list">
-        <li><strong>S04E06:</strong> Never Ricking Story</li>
-        <li><strong>S04E10:</strong> Star Mort Rickturn of the Jerri</li>
-        <li><strong>S05E08:</strong> Rickternal Friendshine of the Spotless Mort</li>
-        <li><strong>S05E10:</strong> Rickmurai Jack</li>
-      </ul>
-    </details>
+      <!-- mandarin Split Layout: Left Text, Right Art (Matching Design image_8.png) -->
+      <section class="episodes-split-view">
+        <div class="episodes-listing-stack">
+          <div class="content-box-Sage">
+            <p><strong>Seasons 1–3: Origins &amp; Citadel,</strong></p>
+            <p class="summary-meta-line">31 Episodes | Sci-Fi Chaos &amp; Citadel Lore</p>
+            <p class="episode-detail-text">Establishes Rick and Morty's dimensional hopping, alien parasites, interdimensional cable, and Evil Morty's rise to power at the Citadel of Ricks.</p>
+          </div>
 
-    <details class="card expandable-card">
-      <summary>Seasons 6–7: The Nemesis Hunt</summary>
-      <ul class="sub-item-list">
-        <li><strong>S06E01:</strong> Solaricks</li>
-        <li><strong>S06E10:</strong> Ricktional Mortification's Rickmas Carol</li>
-        <li><strong>S07E05:</strong> Unmortricken</li>
-        <li><strong>S07E10:</strong> Fear No Mort</li>
-      </ul>
-    </details>
-  </main>
+          <div class="content-box-Sage">
+            <p><strong>Seasons 4–5: Multiverse Canon,</strong></p>
+            <p class="summary-meta-line">20 Episodes | Space Beth &amp; Backstory</p>
+            <p class="episode-detail-text">Explores clone drama with Space Beth, Rick's tragic backstory, and the ultimate collapse of the Central Finite Curve.</p>
+          </div>
+
+          <div class="content-box-Sage">
+            <p><strong>Seasons 6–7: The Nemesis Hunt</strong></p>
+            <p class="summary-meta-line">20 Episodes | Rick Prime &amp; New Era</p>
+            <p class="episode-detail-text">Focuses on hunting down Rick Prime, major character growth for the Smith family, and recalibrating portal travel.</p>
+          </div>
+        </div> <!-- This closing div was the missing piece -->
+
+        <div class="episodes-art-frame">
+          <img src="images/episodesKeyArt.png" alt="Rick and Morty Episodes Art" class="episodes-key-art">
+        </div>
+      </section>
+    </main>
+  </div>
 
 </body>
 </html>
