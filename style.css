@@ -1,181 +1,147 @@
-/* --- Global Reset & Base Styles --- */
+/* --- Core Reset and Base Style --- */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #2b4c38;
-  color: #ffffff;
-  min-height: 100vh;
-  padding: 20px;
+    background-color: #2b3b2e; /* The overall dark background from the Figma screenshot */
+    color: #ffffff;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    padding: 20px;
+    line-height: 1.5;
 }
 
-/* --- Header & Navigation --- */
+/* --- Content Containment and Header --- */
+.content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 header {
-  max-width: 900px;
-  margin: 0 auto 30px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto 30px auto;
 }
 
 header h1 {
-  font-size: 2.5rem;
-  color: #ffffff;
+    font-size: 2.2rem;
+    color: #ffffff;
+    font-weight: 700;
 }
 
+/* --- Design Mandatory: The Navbar Design --- */
 nav {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
 }
 
-/* Fix for visited/unvisited navbar link visibility */
-nav a, 
-nav a:visited {
-  color: #ffffff !important;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.05rem;
-  transition: color 0.2s ease;
+.nav-button {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 500;
+    
+    /* Mandatory Pill Button Design from design images */
+    background-color: #3b4b3e; /* Darker green box from design */
+    padding: 10px 20px;
+    border-radius: 8px; /* Design uses rounded corners for the 'pills' */
+    
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-nav a:hover,
-nav a.active {
-  color: #a3e635 !important; /* Bright portal green on hover and active page */
+.nav-button:hover {
+    background-color: #a0ff9b; /* Slight highlight on hover */
+    color: #000000;
 }
 
-/* GitHub Navbar Button Styling */
-nav a.icon-btn,
-nav a.icon-btn:visited {
-  background-color: #1f2937;
-  color: #ffffff !important;
-  padding: 6px 14px;
-  border-radius: 6px;
-  font-size: 0.95rem;
+/* Mandatory Active Link style (Design Uses Lime Green for active) */
+.nav-button.active {
+    background-color: #a0ff9b; /* Bright lime green from design image */
+    color: #000000;
+    font-weight: 600;
 }
 
-nav a.icon-btn:hover {
-  background-color: #374151;
-  color: #a3e635 !important;
+/* --- PAGE TITLES --- */
+.page-title {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-weight: 700;
 }
 
-/* --- Layout Containers --- */
-main,
-.main-container {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
+/* --- HOMEPAGE SPECIFIC LAYOUT (image_6.png) --- */
+.hero-image-container {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 40px;
 }
 
-/* --- Cards & Feature Sections --- */
-.card,
-.flex-card {
-  background-color: #88b04b;
-  color: #ffffff;
-  border-radius: 12px;
-  padding: 20px;
-  width: 100%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+.cover-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
 }
 
-.home-cards,
-.episodes-list,
-.character-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  width: 100%;
+/* Design uses 4 columns side-by-side for the features */
+.homepage-features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
 }
 
-.flex-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+.homepage-feature-item {
+    text-align: center;
 }
 
-.card-content {
-  flex: 1;
+/* The small light greyish pill backgrounds from image_6.png */
+.homepage-feature-item h2 {
+    background-color: #f1f5f9; 
+    color: #000000;
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 30px; /* Fully rounded 'capsule' headings */
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
 }
 
-.card-content h3,
-.card h3 {
-  font-size: 1.4rem;
-  margin-bottom: 8px;
-  color: #ffffff;
+.homepage-feature-item p {
+    color: #ffffff;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    max-width: 200px;
+    margin: 0 auto;
 }
 
-.card-content p,
-.card p {
-  color: #f0fdf4;
-  font-size: 0.95rem;
-  line-height: 1.4;
+/* --- STORYTIME AND SUBPAGE GENERAL STYLING (image_7.png) --- */
+
+.text-content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
 }
 
-.card-img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 8px;
-  flex-shrink: 0;
+/* Mandatory Light Sage Green Text Box Design from image_7.png */
+.large-text-box {
+    background-color: #d1e8d4; /* The light sage green from design image */
+    color: #000000;
+    padding: 25px;
+    border-radius: 12px; /* Mandatory rounding from design */
 }
 
-/* --- Expandable Lists (<details>) Styling --- */
-details {
-  cursor: pointer;
-  width: 100%;
+.large-text-box p {
+    color: #000000;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
-details summary {
-  font-size: 1.2rem;
-  font-weight: bold;
-  outline: none;
-  list-style-type: '▶ ';
-}
-
-details[open] summary {
-  list-style-type: '▼ ';
-  margin-bottom: 12px;
-}
-
-.sub-item-list {
-  padding-left: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  font-size: 0.95rem;
-}
-
-.character-details {
-  margin-top: 15px;
-  padding-top: 10px;
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
-}
-
-.character-details summary {
-  font-size: 1.05rem;
-}
-
-/* --- Hero Image & Carousel --- */
-.hero-container {
-  width: 100%;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.hero-img {
-  width: 100%;
-  max-height: 450px;
-  object-fit: cover;
-  display: block;
-  border-radius: 12px;
-  transition: opacity 0.5s ease-in-out;
+.large-text-box strong {
+    font-weight: 700;
+    font-size: 1.1rem;
 }

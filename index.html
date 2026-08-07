@@ -1,70 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rick and Morty - Multiverse Hub</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty - HomeHub</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>Rick and Morty</h1>
-    <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="storytime.html">StoryTime</a>
-      <a href="episodes.html">Episodes</a>
-      <a href="characters.html">Characters</a>
-      <a href="gadgets.html">Gadgets &amp; Inventions</a>
-      <a href="https://github.com/LiyaCodeCraft" target="_blank" rel="noopener" class="icon-btn">GitHub</a>
-    </nav>
-  </header>
+    <header>
+        <h1>Rick and Morty</h1>
+        <nav>
+            <a href="index.html" class="nav-button active">Home</a>
+            <a href="storytime.html" class="nav-button">StoryTime</a>
+            <a href="episodes.html" class="nav-button">Episodes</a>
+            <a href="characters.html" class="nav-button">Characters</a>
+            <a href="gadgets.html" class="nav-button">Gadgets &amp; Inventions</a>
+        </nav>
+    </header>
 
-  <main class="main-container">
-    <!-- Hero Image Carousel -->
-    <div class="hero-container">
-      <img src="images/rickAndMortyCover1.png" alt="Rick and Morty Cover" class="hero-img" id="hero-carousel-img">
-    </div>
+    <main class="content-wrapper">
+        <div class="hero-image-container">
+            <img src="images/rickAndMortyCover1.png" alt="Rick and Morty Cover" class="cover-image" id="carouselImage">
+        </div>
 
-    <!-- Home Page Feature Cards -->
-    <section class="home-cards">
-      <article class="card">
-        <h3>StoryTime</h3>
-        <p>Premises, lore, and universe background across Dimension C-137 and the Citadel.</p>
-      </article>
+        <!-- The Four Homepage Columns from Design (image_6.png) -->
+        <section class="homepage-features">
+            <article class="homepage-feature-item">
+                <h2>StoryTime</h2>
+                <p>Synopses, lore, and universe background (C-137, Citadel).</p>
+            </article>
 
-      <article class="card">
-        <h3>Episode's</h3>
-        <p>A complete guide across Seasons 1–7, featuring key storylines and prime arches.</p>
-      </article>
+            <article class="homepage-feature-item">
+                <h2>Episode's</h2>
+                <p>Complete season guide, episode titles, and summaries.</p>
+            </article>
 
-      <article class="card">
-        <h3>Characters</h3>
-        <p>Profiles for Rick, Morty, Summer, Beth, Jerry, and space counterparts.</p>
-      </article>
+            <article class="homepage-feature-item">
+                <h2>Characters</h2>
+                <p>Profiles for Rick, Morty, Summer, Beth, Jerry, and iconic side characters.</p>
+            </article>
 
-      <article class="card">
-        <h3>Gadgets &amp; Inventions</h3>
-        <p>Portal Gun, Meeseeks Box, Interdimensional Cable, and iconic sci-fi tech.</p>
-      </article>
-    </section>
-  </main>
+            <article class="homepage-feature-item">
+                <h2>Gadgets &amp; Inventions</h2>
+                <p>Portal Gun, Meeseeks Box, Microverse Battery, and Interdimensional Cable specs.</p>
+            </article>
+        </section>
+    </main>
 
-  <script>
-    const heroImages = [
-      'images/rickAndMortyCover1.png',
-      'images/rickAndMortyCover2.png'
-    ];
-    let currentImgIndex = 0;
-    const carouselImg = document.getElementById('hero-carousel-img');
+    <script>
+        const images = ['images/rickAndMortyCover1.png', 'images/rickAndMortyCover2.png'];
+        let currentIndex = 0;
+        const imgElement = document.getElementById('carouselImage');
 
-    if (carouselImg) {
-      setInterval(() => {
-        currentImgIndex = (currentImgIndex + 1) % heroImages.length;
-        carouselImg.src = heroImages[currentImgIndex];
-      }, 4000);
-    }
-  </script>
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % images.length;
+            imgElement.src = images[currentIndex];
+        }, 3000);
+    </script>
 
 </body>
 </html>
