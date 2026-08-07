@@ -1,223 +1,230 @@
-/* --- Root Styles & Design Reset --- */
-:root {
-  --bg-dark-olive: #2b3b2e;      /* Figma overall background */
-  --btn-dark-olive: #3b4b3e;     /* Inactive/default navbar buttons */
-  --highlight-lime: #a0ff9b;     /* Active navbar and hover highlights */
-  --content-box-sage: #d1e8d4;   /* Light sage green content blocks */
-  --homepage-capsule: #f1f5f9;   /* Homepage heading capsule bg */
-  --text-primary: #ffffff;       /* Light text */
-  --text-dark: #000000;          /* Dark text inside content boxes */
-}
-
+/* --- Core Reset & Base Styles --- */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--bg-dark-olive);
-  color: var(--text-primary);
-  min-height: 100vh;
-  padding: 30px; /* Spacing from design image */
-  line-height: 1.5;
+    background-color: #2b3b2e; /* The overall dark olive background from Figma images */
+    color: #ffffff;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    padding: 20px;
+    line-height: 1.5;
 }
 
-/* --- Fixed Container & Header Design --- */
+/* --- Fixed Container & Header Layout --- */
 .page-container {
-  max-width: 1200px; /* Adjust based on image scale, try 1200 */
-  margin: 0 auto;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 header {
-  margin-bottom: 40px;
+    max-width: 1000px;
+    margin: 0 auto 30px auto;
 }
 
 header h1 {
-  font-size: 2.2rem;
-  color: var(--text-primary);
-  margin-bottom: 20px;
-  font-weight: 700;
+    font-size: 2.2rem;
+    color: #ffffff;
+    font-weight: 700;
 }
 
+/* --- Mandatory Design: The Navbar Style (Image_10.png) --- */
 nav {
-  display: flex;
-  gap: 12px; /* Spacing between buttons in design */
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
 }
 
-/* MANDATORY: The Pill Navbar Button Design */
-.nav-pill-btn {
-  text-decoration: none;
-  color: var(--text-primary);
-  background-color: var(--btn-dark-olive);
-  padding: 12px 24px;
-  border-radius: 8px; /* Slightly rounded corners from image */
-  font-weight: 500;
-  font-size: 0.95rem;
-  transition: background-color 0.2s ease, color 0.2s ease;
+.nav-button {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 500;
+    
+    /* MANDATORY PILL BUTTON DESIGN */
+    background-color: #3b4b3e; /* Darker green box from design */
+    padding: 10px 20px;
+    border-radius: 8px; /* Slightly rounded pill corners from design */
+    
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.nav-pill-btn:hover {
-  background-color: var(--highlight-lime);
-  color: var(--text-dark);
+.nav-button:hover {
+    background-color: #a0ff9b; /* Slight portal highlight on hover */
+    color: #000000;
 }
 
-/* Mandatory Active/Current Page Link (Lime Green) */
-.nav-pill-btn.active {
-  background-color: var(--highlight-lime);
-  color: var(--text-dark);
-  font-weight: 600;
+/* Mandatory Active Link style (Design uses Lime Green for active) */
+.nav-button.active {
+    background-color: #a0ff9b; /* Bright lime green active state */
+    color: #000000;
+    font-weight: 600;
 }
 
-/* --- Layout Wrappers --- */
-main {
-  width: 100%;
+/* --- Common Content Wrapper --- */
+.content-wrapper {
+    width: 100%;
 }
 
+/* --- PAGE TITLES --- */
 .page-title {
-  font-size: 2rem;
-  margin-bottom: 40px;
-  color: var(--text-primary);
-  font-weight: 700;
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-weight: 700;
 }
 
-/* --- LIGHT SAGE CONTENT BOXES (Story, Episodes, Characters) --- */
-.content-box-sage {
-  background-color: var(--content-box-sage);
-  color: var(--text-dark);
-  padding: 30px; /* Spacing from image_7.png and image_8.png */
-  border-radius: 12px;
-  margin-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+/* --- HOMEPAGE LAYOUT (Matching Image_11.png) --- */
+.hero-image-container {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 40px;
 }
 
-.content-box-sage strong {
-  font-size: 1.15rem;
-  font-weight: 700;
+.cover-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
 }
 
-/* --- HOMEPAGE LAYOUT (Replicating image_6.png) --- */
-
-.homepage-hero-img {
-  width: 100%;
-  border-radius: 12px;
-  display: block;
-  margin-bottom: 50px; /* Large space from image_6.png */
-  object-fit: cover;
-}
-
-/* Design Mandatory: 4-Column Split layout for the features */
-.homepage-features-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
-  width: 100%;
+/* Mandarin Layout for the features from Design (Image_11.png) */
+.homepage-features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
 }
 
 .homepage-feature-item {
-  text-align: center;
+    text-align: center;
 }
 
-/* Mandantory Capsule Headings from image_6.png */
+/* Mandel: The small light pill backgrounds from Image_11.png */
 .homepage-feature-item h2 {
-  background-color: var(--homepage-capsule);
-  color: var(--text-dark);
-  display: inline-block;
-  padding: 10px 30px;
-  border-radius: 30px; /* Fully rounded 'capsule' */
-  font-size: 1.15rem;
-  font-weight: 600;
-  margin-bottom: 15px;
+    background-color: #f1f5f9; 
+    color: #000000;
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 30px; /* Fully rounded capsule headings */
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
 }
 
 .homepage-feature-item p {
-  color: var(--text-primary);
-  font-size: 0.85rem;
-  line-height: 1.4;
-  max-width: 220px;
-  margin: 0 auto;
+    color: #ffffff;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    max-width: 200px;
+    margin: 0 auto;
 }
 
-/* --- EPISODES LAYOUT (Replicating image_8.png) --- */
+/* --- LIGHT SAGE CONTENT BOXES (Subpages Story, Episodes, Characters) --- */
+.text-content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
 
-/* Mandatory Split View (Text blocks left, season art right) */
+/* MANDATORY LIGHT SAGE GREEN TEXT BOX (Image_13.png) */
+.large-text-box {
+    background-color: #d1e8d4; /* The specific light sage green color */
+    color: #000000;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.large-text-box p {
+    color: #000000;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.large-text-box strong {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* --- EPISODES LAYOUT (Matching Image_8.png and Mandarin Style) --- */
+
+/* Split view layout (text boxes on left, art on right) */
 .episodes-split-view {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Two equal columns */
-  gap: 40px;
-  align-items: start;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 30px;
+    align-items: start;
 }
 
-.episodes-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+.episodes-list-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
 }
 
-/* Detail text styles for episode meta */
-.summary-meta-line {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: #1f2937; /* Slightly darker than text-dark */
+/* Detail summaries meta style inside large-text-box */
+.episode-summary-details {
+    font-size: 0.9rem;
+    color: #1f2937; /* Slightly darker grey for details */
+    margin-top: 5px;
 }
 
-.episode-detail-text {
-  font-size: 0.9rem;
-  line-height: 1.5;
+.episode-art-container {
+    width: 100%;
 }
 
-.episodes-key-art-container {
-  width: 100%;
+.episode-art {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
 }
 
-.episodes-key-art {
-  width: 100%;
-  border-radius: 12px;
-  object-fit: cover;
+/* --- CHARACTERS LAYOUT (Matching Image_9.png and Mandarin Style) --- */
+
+/* 3-Column horizontal list grid */
+.character-grid-view {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 Characters across */
+    gap: 25px;
 }
 
-/* --- CHARACTERS LAYOUT (Replicating image_9.png) --- */
-
-/* Mandatory grid for characters */
-.characters-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 characters across from design */
-  gap: 30px;
+/* Mandantory Character Card Design: 3 wide with image side-by-side with text */
+.character-card-design {
+    background-color: #d1e8d4; /* Light Sage Green */
+    color: #000000;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 15px;
 }
 
-.char-card-design {
-  background-color: var(--content-box-sage);
-  color: var(--text-dark);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  gap: 20px;
+.character-img-container {
+    flex-shrink: 0;
 }
 
-.char-card-design img {
-  width: 90px; /* Precise scaling from image_9.png */
-  height: 90px;
-  border-radius: 8px;
-  object-fit: cover;
-  flex-shrink: 0;
+.character-design-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
-.char-text-box {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+.character-info-box {
+    display: flex;
+    flex-direction: column;
 }
 
-.char-text-box h3 {
-  font-size: 1.2rem;
-  font-weight: 700;
+.character-info-box h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
 }
 
-.char-text-box p {
-  font-size: 0.9rem;
-  line-height: 1.4;
+.character-info-box p {
+    font-size: 0.85rem;
+    line-height: 1.3;
 }
